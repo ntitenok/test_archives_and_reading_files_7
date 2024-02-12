@@ -11,7 +11,7 @@ class TestArchives(ArhivesPage):
                                     'Borger', 'Hacker', 'Wachtel', 'Pfau', 'Mccrystal', 'Karner', 'Underdahl', 'Darity',
                                     'Sanor', 'Harn', 'Martina', 'Lafollette', 'Cail', 'Abbey', 'Danz', 'Alkire']
 
-    expected_data_pdf = ""
+    expected_data_pdf = "Python Testing with pytest"
 
     file_name_csv = 'file_example_XLSX_50.csv'
 
