@@ -9,7 +9,8 @@ from utilites.archive_pathes import TESTDATA_PATH, ARCHIVE_PATCH, EXTRACTED_FILE
 
 @pytest.fixture(autouse=True,scope='session')
 def test_create_archive():
-    os.mkdir(EXTRACTED_FILES_PATCH)
+    if not os.path.exists(EXTRACTED_FILES_PATCH):
+        os.mkdir(EXTRACTED_FILES_PATCH)
     with ZipFile(ARCHIVE_PATCH, 'a') as my_zip:
         for folder, subfolders, files in os.walk(str(TESTDATA_PATH)):
             for file in files:
